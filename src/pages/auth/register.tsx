@@ -1,12 +1,5 @@
-import Link from "next/link";
+import RegisterView from "@/views/auth/register";
 
-const RegisterPage = () => {
-  return (
-    <div>
-      <h1>Halaman Register</h1>
-      <Link href="/auth/login">Ke Halaman Login</Link>
-    </div>
-  );
-};
-
-export default RegisterPage;
+export default function RegisterPage() {
+  return <RegisterView />;
+}

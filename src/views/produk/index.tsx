@@ -6,6 +6,10 @@ export default function ProdukView() {
     <>
       <HeroSection />
       <MainSection />
+
+      <footer className="bg-gray-900 text-white text-center py-4">
+        footer
+      </footer>
     </>
   );
 }

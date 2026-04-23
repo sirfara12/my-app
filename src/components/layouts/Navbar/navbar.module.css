@@ -1,9 +1,94 @@
+/* Container Utama Navbar */
 .navbar {
-  width: 100%;
-  height: 60px;
-  background-color: #333;
-  color: white;
+  height: 80px;
+  padding: 0 40px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
-} 
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar__brand {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Sisi Kanan (User + Button) */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Grup Welcome Text + Foto Profil */
+.navbar__user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar__user-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #e0e0e0;
+  /* Menggunakan font serif agar mirip dengan contoh dosen */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Foto Profil / Avatar */
+.navbar__user-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3b82f6; /* Border Biru */
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* Efek Glow */
+  transition: transform 0.3s ease;
+}
+
+.navbar__user-image:hover {
+  transform: scale(1.1);
+}
+
+/* Base Button */
+.navbar__button {
+  padding: 10px 24px;
+  border-radius: 50px; /* Bentuk Oval */
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Tombol Sign Out (Merah) */
+.navbar__button--danger {
+  background: #f44336;
+  color: white;
+}
+
+.navbar__button--danger:hover {
+  background: #d32f2f;
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Tombol Sign In (Biru) */
+.navbar__button--primary {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Responsive: Sembunyikan teks di layar kecil agar tidak penuh */
+@media (max-width: 600px) {
+  .navbar__user-text {
+    display: none;
+  }
+  .navbar {
+    padding: 0 20px;
+  }
+}

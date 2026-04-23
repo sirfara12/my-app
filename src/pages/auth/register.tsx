@@ -1,5 +1,11 @@
-import RegisterView from "@/views/auth/register";
+import Link from "next/link";
+import TampilanRegister from "@/views/auth/register";
 
-export default function RegisterPage() {
-  return <RegisterView />;
-}
+const halamanRegister = () => {
+  return (
+
+    <TampilanRegister />
+  );
+};
+
+export default halamanRegister;

@@ -1,23 +1,25 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
-// import { Inter } from 'next/font/google'
-// import styles from '@/styles/Home.module.css'
+import Head from 'next/head'
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import styles from '@/styles/Home.module.css'
+import Link from "next/link";
 
-// import Link from "next/link";
+const inter = Inter({ subsets: ['latin'] })
 
-// const inter = Inter({ subsets: ['latin'] })
-
-// export default function Home() {
-//   return (
-//     <div>
-//       <h1>Praktikum Next.js Pages Router</h1> <br />
-//       <p>Mahasiswa D4 pengembangan Web</p>
-//        <br />
+export default function Home() {
+  return (
+    <div>
+      <Head>
+        <title>Praktikum Next.js Pages Router</title>
+      </Head>
+      <h1>Praktikum Next.js Pages Router</h1> <br />
+      <p>Mahasiswa D4 pengembangan Web</p>
+       <br />
 
       
-//     </div>
-//   )
-// }
+    </div>
+  )
+}
 //     // <>
 //     //   <Head>
 //     //     <title>Create Next App</title>
@@ -125,8 +127,8 @@
 // //}
 
 
-import ProdukView from "@/views/produk";
+// import ProdukView from "@/views/produk";
 
-export default function Home() {
-  return <ProdukView />;
-}
+// export default function Home() {
+//   return <ProdukView />;
+// }

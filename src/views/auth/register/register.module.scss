@@ -1,4 +1,4 @@
-.login {
+.register {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@
       }
     }
   }
-} // Kurung tutup .login yang benar
+} // Kurung tutup .register yang benar
 
 /* Animation */
 @keyframes fadeIn {
@@ -99,7 +99,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .login {
+  .register {
     &__form {
       padding: 30px 20px;
     }

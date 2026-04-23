@@ -1,20 +1,25 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import ProdukView from "@/views/produk";
+import TampilanProduk from "../../views/produk";
+import useSWR from "swr";
+import fetcher from "../../utils/swr/fetcher";
 
-const ProdukPage = () => {
-  // const [isLogin, setIsLogin] = useState(true); 
-  // const { push } = useRouter();
+// const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-  // useEffect(() => {
-  //   if (!isLogin) {
-  //     push("/auth/login");
-  //   }
-  // }, [isLogin, push]);
+const kategori = () => {
+  // const [isLogin, setIsLogin] = useState(true);
+  const { push } = useRouter();
+  const [products, setProducts] = useState([]);
+  // console.log("products:", products);
 
-  // if (!isLogin) return null;
+  const { data, error, isLoading } = useSWR("/api/produk", fetcher);
+  // cek apakah data, error, dan isLoading sudah benar
 
-  return <ProdukView />;
+  return (
+    <div className="container ms-auto p-4">
+      <TampilanProduk products={isLoading ? [] : data.data} />
+    </div>
+  );
 };
 
-export default ProdukPage;
+export default kategori;
